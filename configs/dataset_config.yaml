@@ -1,0 +1,24 @@
+# ================================
+# DATASET CONFIG (generic)
+# ================================
+# Expected SFT format:
+# {
+#   "messages": [
+#     {"role": "user", "content": "prompt"},
+#     {"role": "assistant", "content": "answer"}
+#   ]
+# }
+# Additional messages beyond 2 are allowed (chat format).
+train_path: "/content/data/train.jsonl"
+eval_path:  "/content/data/eval.jsonl"
+
+# JSON schema to validate each record
+schema_path: "/content/data/schema.json"
+
+# Optional filtering / limits for quick tests
+max_train_records: null   # e.g., 1000
+max_eval_records:  null   # e.g., 200
+
+# Formatting settings
+add_system_prompt: false
+system_prompt: ""

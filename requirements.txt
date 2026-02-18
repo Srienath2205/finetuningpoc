@@ -1,0 +1,6 @@
+# Local editor tooling only (NOT used in Colab)
+black==24.10.0
+ruff==0.7.1
+nbstripout==0.6.1
+pyyaml==6.0.2
+jsonschema==4.23.0

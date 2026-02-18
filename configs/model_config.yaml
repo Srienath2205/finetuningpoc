@@ -1,0 +1,30 @@
+# ================================
+# MODEL CONFIG (generic)
+# ================================
+# model_source:
+#   - kaggle: use kagglehub to download (recommended for Gemma)
+#   - hf:     use Hugging Face model id directly (requires network access)
+model_source: "kaggle"
+
+# If model_source == "kaggle":
+#   pass the exact Kaggle Models path that kagglehub understands.
+#   Example for Gemma 3 1B instruct PyTorch:
+#   google/gemma-3/pyTorch/gemma-3-1b-it
+#
+# If model_source == "hf":
+#   pass the Hugging Face repo id, e.g., "mistralai/Mistral-7B-Instruct-v0.2"
+model_name: "google/gemma-3/pyTorch/gemma-3-1b-it"
+
+# Quantization mode for base weights
+#   - none
+#   - 8bit
+#   - 4bit      (QLoRA recommended on Colab free GPU)
+quantization: "4bit"
+
+# Device map:
+#   - "auto" is recommended
+device_map: "auto"
+
+# Torch dtype (used if not quantized)
+#   - "bfloat16" is a good default on T4/L4/A100
+torch_dtype: "bfloat16"

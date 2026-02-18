@@ -1,0 +1,19 @@
+# ================================
+# USE-CASE CONFIG (pluggable 20%)
+# ================================
+usecase_name: "generic_usecase"
+
+# Domain for documentation/metrics labelling only
+domain: "generic"
+
+# Expected output format of assistant:
+#   - "free_text"
+#   - "json"  (if you expect strict JSON, we compute schema_fidelity)
+output_format: "free_text"
+
+# Custom metrics toggles (add more if needed)
+metrics:
+  schema_fidelity: false     # set true if output_format == "json"
+  exact_match: false
+  rouge: false
+  bleu: false
